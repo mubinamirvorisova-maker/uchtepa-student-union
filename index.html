@@ -1,667 +1,1707 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thompson International School – Student Union</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
-</head>
-<body>
+/* ═══════════════════════════════════════════════════════════════
+   THOMPSON INTERNATIONAL SCHOOL — STUDENT UNION
+   style.css | Black × Deep Red × White — Luxury Minimal
+   ═══════════════════════════════════════════════════════════════ */
 
-  <!-- ═══════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo" data-nav="home">
-        <span class="logo-symbol">✦</span>
-        <span class="logo-text">TIS <em>Uchtepa</em></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home"     class="nav-link active" data-nav="home">Home</a></li>
-        <li><a href="#about"    class="nav-link" data-nav="about">About</a></li>
-        <li><a href="#members"  class="nav-link" data-nav="members">Members</a></li>
-        <li><a href="#teachers" class="nav-link" data-nav="teachers">Teachers</a></li>
-        <li><a href="#news"     class="nav-link" data-nav="news">News</a></li>
-        <li><a href="#gallery"  class="nav-link" data-nav="gallery">Gallery</a></li>
-        <li><a href="#contact"  class="nav-link" data-nav="contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+/* ── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --black:       #080808;
+  --black-2:     #0f0f0f;
+  --black-3:     #161616;
+  --black-4:     #1e1e1e;
+  --black-5:     #252525;
+  --red:         #c41230;
+  --red-dark:    #9a0e25;
+  --red-light:   #e8193e;
+  --red-glow:    rgba(196, 18, 48, 0.35);
+  --red-dim:     rgba(196, 18, 48, 0.12);
+  --white:       #f5f0eb;
+  --white-dim:   rgba(245, 240, 235, 0.7);
+  --white-faint: rgba(245, 240, 235, 0.12);
+  --border:      rgba(245, 240, 235, 0.08);
+  --border-red:  rgba(196, 18, 48, 0.3);
 
-  <!-- ═══════════════════════════════════
-       HERO
-  ═══════════════════════════════════════ -->
-  <section class="hero" id="home">
-    <div class="hero-grid"></div>
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
-    <div class="hero-content">
-      <div class="hero-badge reveal-up">
-        <span class="badge-dot"></span>
-        Student Union — Uchtepa Branch
-      </div>
-      <h1 class="hero-title reveal-up delay-1">
-        Thompson<br /><em>International</em><br />School
-      </h1>
-      <p class="hero-subtitle reveal-up delay-2">Leadership. Influence. Action.</p>
-      <div class="hero-divider reveal-up delay-3"></div>
-      <div class="hero-cta reveal-up delay-4">
-        <a href="#members" class="btn btn-primary">Meet Our Team</a>
-        <a href="#news"    class="btn btn-ghost">Latest News</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item reveal-right">
-        <span class="stat-number" data-target="400">0</span>
-        <span class="stat-label">Students</span>
-      </div>
-      <div class="stat-item reveal-right delay-1">
-        <span class="stat-number" data-target="50">0</span>
-        <span class="stat-label">Teachers</span>
-      </div>
-      <div class="stat-item reveal-right delay-2">
-        <span class="stat-number" data-target="11">0</span>
-        <span class="stat-label">Grades</span>
-      </div>
-    </div>
-  </section>
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-accent:  'Bebas Neue', sans-serif;
 
-  <!-- ═══════════════════════════════════
-       ABOUT
-  ═══════════════════════════════════════ -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Who We Are</span>
-        <h2 class="section-title">About the <em>Student Union</em></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-visual reveal-left">
-          <div class="about-image-frame">
-            <div class="about-image-placeholder">
-              <div class="placeholder-text">
-                <span class="placeholder-icon">🏫</span>
-                <p>School Image</p>
-              </div>
-            </div>
-            <div class="about-frame-accent"></div>
-            <div class="about-frame-label">Est. 2024</div>
-          </div>
-        </div>
-        <div class="about-content reveal-right">
-          <p class="about-lead">
-            The Thompson International School Student Union at Uchtepa Branch is the official representative body of student voice, creativity, and leadership.
-          </p>
-          <p class="about-body">
-            We bridge the gap between students and administration, organise cultural and academic events, and create an environment where every student can thrive, lead, and make a lasting impact.
-          </p>
-          <p class="about-body">
-            Our mission is rooted in three pillars: <strong>Leadership</strong> — developing the next generation of changemakers; <strong>Influence</strong> — shaping school culture and policy; <strong>Action</strong> — delivering real, tangible results for our community.
-          </p>
-          <div class="about-pillars">
-            <div class="pillar">
-              <div class="pillar-icon">◈</div>
-              <div><strong>Leadership</strong><p>Developing confident voices</p></div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">◈</div>
-              <div><strong>Influence</strong><p>Shaping school culture</p></div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">◈</div>
-              <div><strong>Action</strong><p>Delivering real results</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  --radius:    6px;
+  --radius-lg: 12px;
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  <!-- ═══════════════════════════════════════════════════════
-       MEMBERS
-       ───────────────────────────────────────────────────────
-       CARD STRUCTURE (do not break this):
-         .member-card
-           .member-card-inner
-             .member-photo
-               <img>                  ← image INSIDE .member-photo
-               .member-position-tag   ← badge INSIDE .member-photo
-             .member-info
-               h3 / p / achievements
-           .card-glow
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="section members-section" id="members">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">The Council</span>
-        <h2 class="section-title">Student Union <em>Members</em></h2>
-      </div>
+  --max-width: 1280px;
+  --section-pad: 120px;
+}
 
-      <div class="members-grid">
+/* ── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <!-- Card 1 : President -->
-        <div class="member-card reveal-up">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/mubina.jpg" alt="Mubina Mirvorisova" />
-              <div class="member-position-tag">President</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Mubina Mirvorisova</h3>
-              <p class="member-role">President</p>
-              <p class="member-bio">A visionary leader passionate about student rights and academic excellence. Mubina drives key initiatives and ensures every student's voice is heard.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">ASMO Silver Medal</span>
-                <span class="achievement-tag">XPERT STEM Gold Medal</span>
-                <span class="achievement-tag">5× Model UN</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
 
-        <!-- Card 2 : Vice President -->
-        <div class="member-card reveal-up delay-1">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/burhoniddin.jpg" alt="Burhoniddin Bahodirzoda" />
-              <div class="member-position-tag">Vice President</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Burhoniddin Bahodirzoda</h3>
-              <p class="member-role">Vice President</p>
-              <p class="member-bio">Burhoniddin oversees event planning and student welfare. Known for his organisational brilliance and empathetic leadership style.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">Event Lead</span>
-                <span class="achievement-tag">AMO Olympiad</span>
-                <span class="achievement-tag">STEM Award</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 
-        <!-- Card 3 : Sports Manager -->
-        <div class="member-card reveal-up delay-2">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/abdulaziz.jpg" alt="Abdulaziz Abdumutalov" />
-              <div class="member-position-tag">Sports Manager</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Abdulaziz Abdumutalov</h3>
-              <p class="member-role">Sports Manager</p>
-              <p class="member-bio">Abdulaziz leads the Union's sports initiatives, ensuring every tournament and activity runs smoothly with excellent planning and coordination.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">8× Amateur Boxing Champion</span>
-                <span class="achievement-tag">3+ Sports Tournaments</span>
-                <span class="achievement-tag">XPERT STEM 3rd Place</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
 
-        <!-- Card 4 : Event Manager -->
-        <div class="member-card reveal-up">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/diora.jpg" alt="Diora Irmamatova" />
-              <div class="member-position-tag">Event Manager</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Diora Irmamatova</h3>
-              <p class="member-role">Event Manager</p>
-              <p class="member-bio">Diora ensures every event runs smoothly with perfect planning and communication.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">XPERT STEM Bronze Medal</span>
-                <span class="achievement-tag">UI/UX Designer</span>
-                <span class="achievement-tag">Art Competition 2nd Place</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-        <!-- Card 5 : Event Manager's Assistant -->
-        <div class="member-card reveal-up delay-1">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/abdurazzoq.jpg" alt="Abdurazzoq Abdumutalov" />
-              <div class="member-position-tag">Event Manager's Assistant</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Abdurazzoq Abdumutalov</h3>
-              <p class="member-role">Assistant of Event Manager</p>
-              <p class="member-bio">Supporting the Event Manager, Abdurazzoq keeps every event organized, on schedule, and running smoothly.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">School Chess Champion</span>
-                <span class="achievement-tag">4+ Events Organizer</span>
-                <span class="achievement-tag">IRN Math Olympiad 1st Place</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+/* ── Utility ────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
 
-        <!-- Card 6 : Media Manager -->
-        <div class="member-card reveal-up delay-2">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/bilol.jpg" alt="Bilol Hikmatullaev" />
-              <div class="member-position-tag">Media Manager</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Bilol Hikmatullaev</h3>
-              <p class="member-role">Media Manager</p>
-              <p class="member-bio">Bilol manages the Union's media, creating engaging content, running social media, and ensuring clear communication across the school.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">12× Kickboxing Winner</span>
-                <span class="achievement-tag">1st Place Swimming (Russia 2018–19)</span>
-                <span class="achievement-tag">Hippo Olympiad</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+.section {
+  padding: var(--section-pad) 0;
+  position: relative;
+}
 
-        <!-- Card 7 : Media Manager's Assistant -->
-        <div class="member-card reveal-up">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/su.png" alt="Abdulaziz Saidvaliev" />
-              <div class="member-position-tag">Media Manager's Assistant</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Abdulaziz Saidvaliev</h3>
-              <p class="member-role">Assistant of Media Manager</p>
-              <p class="member-bio">Abdulaziz supports the Media Manager by promoting school events, creating content for festivals, and highlighting cultural celebrations.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">Regional Turon Champion</span>
-                <span class="achievement-tag">1st Place Swimming</span>
-                <span class="achievement-tag">20+ Medals in Turon</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+/* Section header */
+.section-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
 
-        <!-- Card 8 : Education Representative -->
-        <div class="member-card reveal-up delay-1">
-          <div class="member-card-inner">
-            <div class="member-photo">
-              <img src="images/shirin.jpg" alt="Shirin Alijonova" />
-              <div class="member-position-tag">Education Representative</div>
-            </div>
-            <div class="member-info">
-              <h3 class="member-name">Shirin Alijonova</h3>
-              <p class="member-role">Education Representative</p>
-              <p class="member-bio">A passionate Education Representative dedicated to student rights and academic excellence. Shirin drives key initiatives and ensures every student's voice is heard.</p>
-              <div class="member-achievements">
-                <span class="achievement-tag">IELTS 7.0</span>
-                <span class="achievement-tag">TOFAS Level 6</span>
-                <span class="achievement-tag">World Scholars Cup</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-glow"></div>
-        </div>
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red-light);
+  padding: 6px 16px;
+  border: 1px solid var(--border-red);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  background: var(--red-dim);
+}
 
-      </div><!-- /members-grid -->
-    </div>
-  </section>
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--white);
+}
 
-  <!-- ═══════════════════════════════════
-       TEACHERS
-  ═══════════════════════════════════════ -->
-  <section class="section teachers-section" id="teachers">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our Faculty</span>
-        <h2 class="section-title">Meet the <em>Teachers</em></h2>
-      </div>
-      <div class="teachers-grid">
+.section-title em {
+  font-style: italic;
+  color: var(--red-light);
+}
 
-        <div class="teacher-card reveal-up">
-          <div class="teacher-photo">
-            <div class="photo-placeholder teacher-ph"><span>👨‍🏫</span></div>
-          </div>
-          <div class="teacher-info">
-            <h3 class="teacher-name">Mr. Hamid</h3>
-            <span class="teacher-subject">SAT Math</span>
-            <p class="teacher-desc">An experienced educator who brings mathematical concepts to life and champions critical thinking through problem-solving workshops.</p>
-          </div>
-        </div>
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
 
-        <div class="teacher-card reveal-up delay-1">
-          <div class="teacher-photo">
-            <div class="photo-placeholder teacher-ph"><span>👩‍🏫</span></div>
-          </div>
-          <div class="teacher-info">
-            <h3 class="teacher-name">Ms. Shakhnoza</h3>
-            <span class="teacher-subject">English</span>
-            <p class="teacher-desc">Ms. Shakhnoza's passion for the English language has inspired countless students to communicate with confidence and clarity.</p>
-          </div>
-        </div>
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.05);
+  opacity: 0;
+  transition: var(--transition);
+}
 
-        <div class="teacher-card reveal-up delay-2">
-          <div class="teacher-photo">
-            <div class="photo-placeholder teacher-ph"><span>👨‍🔬</span></div>
-          </div>
-          <div class="teacher-info">
-            <h3 class="teacher-name">Mr. Rustam Akhmedov</h3>
-            <span class="teacher-subject">Physics & STEM</span>
-            <p class="teacher-desc">A former research scientist turned educator, Mr. Akhmedov leads the robotics club and inspires students to pursue careers in science and technology.</p>
-          </div>
-        </div>
+.btn:hover::before { opacity: 1; }
 
-        <div class="teacher-card reveal-up">
-          <div class="teacher-photo">
-            <div class="photo-placeholder teacher-ph"><span>👩‍💼</span></div>
-          </div>
-          <div class="teacher-info">
-            <h3 class="teacher-name">Ms. Sarah Mitchell</h3>
-            <span class="teacher-subject">History & Global Studies</span>
-            <p class="teacher-desc">Ms. Mitchell connects past and present with immersive lessons and MUN coaching. Her students have won at regional and international conferences.</p>
-          </div>
-        </div>
+.btn-primary {
+  background: var(--red);
+  color: var(--white);
+  border: 1px solid var(--red);
+}
 
-        <div class="teacher-card reveal-up delay-1">
-          <div class="teacher-photo">
-            <div class="photo-placeholder teacher-ph"><span>👨‍🎨</span></div>
-          </div>
-          <div class="teacher-info">
-            <h3 class="teacher-name">Mr. Jahongir Umarov</h3>
-            <span class="teacher-subject">Arts & Design</span>
-            <p class="teacher-desc">With a background in graphic design and fine arts, Mr. Umarov nurtures creative talent through exhibitions, portfolio workshops and collaborative murals.</p>
-          </div>
-        </div>
+.btn-primary:hover {
+  background: var(--red-light);
+  border-color: var(--red-light);
+  box-shadow: 0 0 28px var(--red-glow), 0 4px 20px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
 
-        <div class="teacher-card reveal-up delay-2">
-          <div class="teacher-photo">
-            <div class="photo-placeholder teacher-ph"><span>👩‍⚕️</span></div>
-          </div>
-          <div class="teacher-info">
-            <h3 class="teacher-name">Ms. Dilnoza Khasanova</h3>
-            <span class="teacher-subject">Biology & Health Sciences</span>
-            <p class="teacher-desc">Ms. Khasanova's interactive labs and health awareness campaigns have made biology one of the most popular subjects at TIS Uchtepa.</p>
-          </div>
-        </div>
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--border);
+}
 
-      </div>
-    </div>
-  </section>
+.btn-ghost:hover {
+  border-color: var(--red);
+  color: var(--red-light);
+  box-shadow: 0 0 18px var(--red-glow);
+  transform: translateY(-2px);
+}
 
-  <!-- ═══════════════════════════════════
-       NEWS & EVENTS
-  ═══════════════════════════════════════ -->
-  <section class="section news-section" id="news">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What's Happening</span>
-        <h2 class="section-title">News & <em>Events</em></h2>
-      </div>
-      <div class="news-grid">
-        <article class="news-card news-featured reveal-left">
-          <div class="news-image news-image-featured">
-            <div class="news-img-placeholder"><span>⚽</span></div>
-            <div class="news-category-tag">Sports</div>
-          </div>
-          <div class="news-content">
-            <div class="news-meta">
-              <span class="news-date">March 15, 2025</span>
-              <span class="news-reading">5 min read</span>
-            </div>
-            <h3 class="news-title">Inter-Branch Football Tournament — TIS Uchtepa Takes the Trophy</h3>
-            <p class="news-excerpt">Our school football team delivered a stunning performance across three rounds, defeating rivals from four branches to claim the championship title. Coach Rashidov praised the team's unity and discipline throughout the tournament.</p>
-            <a href="#" class="news-read-more">Read Full Story <span>→</span></a>
-          </div>
-        </article>
-        <div class="news-sidebar">
-          <article class="news-card news-small reveal-right">
-            <div class="news-image news-image-small">
-              <div class="news-img-placeholder"><span>🌍</span></div>
-              <div class="news-category-tag">Academic</div>
-            </div>
-            <div class="news-content">
-              <div class="news-meta"><span class="news-date">February 28, 2025</span></div>
-              <h3 class="news-title">MUN Conference 2025 — Diplomacy in Action</h3>
-              <p class="news-excerpt">Twelve TIS delegates represented nations at the Tashkent Model United Nations, earning Best Delegate and Outstanding Delegate awards.</p>
-              <a href="#" class="news-read-more">Read More <span>→</span></a>
-            </div>
-          </article>
-          <article class="news-card news-small reveal-right delay-1">
-            <div class="news-image news-image-small">
-              <div class="news-img-placeholder"><span>🎤</span></div>
-              <div class="news-category-tag">Club</div>
-            </div>
-            <div class="news-content">
-              <div class="news-meta"><span class="news-date">February 10, 2025</span></div>
-              <h3 class="news-title">Debate Club Semifinals: The Art of Argument</h3>
-              <p class="news-excerpt">Our Debate Club reached the national semifinals, tackling topics from climate policy to digital ethics. A proud achievement for our students.</p>
-              <a href="#" class="news-read-more">Read More <span>→</span></a>
-            </div>
-          </article>
-          <article class="news-card news-small reveal-right delay-2">
-            <div class="news-image news-image-small">
-              <div class="news-img-placeholder"><span>🌙</span></div>
-              <div class="news-category-tag">Community</div>
-            </div>
-            <div class="news-content">
-              <div class="news-meta"><span class="news-date">March 5, 2025</span></div>
-              <h3 class="news-title">Ramadan Charity Drive — Giving Back Together</h3>
-              <p class="news-excerpt">The Student Union organised a school-wide charity drive this Ramadan, collecting food packages and donations for 40 families in the Uchtepa district.</p>
-              <a href="#" class="news-read-more">Read More <span>→</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="events-timeline reveal-up">
-        <h3 class="timeline-title">Upcoming Events</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">Apr 12</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content"><strong>Science Fair 2025</strong><p>Main Hall — All grades</p></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Apr 20</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content"><strong>Navruz Cultural Festival</strong><p>School Courtyard — Open to all</p></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">May 3</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content"><strong>Student Union Elections</strong><p>Nominations open now</p></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">May 18</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content"><strong>End-of-Year Gala</strong><p>TIS Grand Hall — Evening</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.btn-full { width: 100%; justify-content: center; }
+.btn-arrow { transition: transform var(--transition); }
+.btn:hover .btn-arrow { transform: translateX(4px); }
 
-  <!-- ═══════════════════════════════════
-       GALLERY
-  ═══════════════════════════════════════ -->
-  <section class="section gallery-section" id="gallery">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our Moments</span>
-        <h2 class="section-title">School <em>Gallery</em></h2>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-large reveal-up">
-          <div class="gallery-placeholder"><span>🏆</span><p>Championship Day</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Football Championship 2025</p></div>
-        </div>
-        <div class="gallery-item reveal-up delay-1">
-          <div class="gallery-placeholder"><span>🎓</span><p>Graduation</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Graduation Ceremony</p></div>
-        </div>
-        <div class="gallery-item reveal-up delay-2">
-          <div class="gallery-placeholder"><span>🌍</span><p>MUN 2025</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>MUN Conference 2025</p></div>
-        </div>
-        <div class="gallery-item reveal-up">
-          <div class="gallery-placeholder"><span>🎤</span><p>Debate Club</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Debate Semifinals</p></div>
-        </div>
-        <div class="gallery-item gallery-large reveal-up delay-1">
-          <div class="gallery-placeholder"><span>🌙</span><p>Ramadan Event</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Ramadan Charity Drive</p></div>
-        </div>
-        <div class="gallery-item reveal-up delay-2">
-          <div class="gallery-placeholder"><span>🎨</span><p>Art Exhibition</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Annual Art Exhibition</p></div>
-        </div>
-        <div class="gallery-item reveal-up">
-          <div class="gallery-placeholder"><span>🔬</span><p>Science Fair</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Science Fair 2024</p></div>
-        </div>
-        <div class="gallery-item reveal-up delay-1">
-          <div class="gallery-placeholder"><span>🎪</span><p>Cultural Fest</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Navruz Festival</p></div>
-        </div>
-        <div class="gallery-item reveal-up delay-2">
-          <div class="gallery-placeholder"><span>📚</span><p>Study Week</p></div>
-          <div class="gallery-overlay"><span class="gallery-icon">⊕</span><p>Academic Study Week</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightboxClose">✕</button>
-      <div class="lightbox-content" id="lightboxContent"></div>
-    </div>
-  </section>
+/* ── Animation helpers ──────────────────────────────────────── */
+.reveal-up,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
 
-  <!-- ═══════════════════════════════════
-       CONTACT
-  ═══════════════════════════════════════ -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Get in Touch</span>
-        <h2 class="section-title">Contact <em>Us</em></h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal-left">
-          <div class="contact-info-item">
-            <div class="contact-icon">📍</div>
-            <div><strong>Address</strong><p>Uchtepa District, Tashkent, Uzbekistan</p></div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon">📧</div>
-            <div><strong>Email</strong><p>studentunion@tis-uchtepa.edu.uz</p></div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon">📞</div>
-            <div><strong>Phone</strong><p>+998 71 200 00 00</p></div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon">🕐</div>
-            <div><strong>Office Hours</strong><p>Mon–Fri, 9:00 AM – 5:00 PM</p></div>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" class="social-link" aria-label="Telegram"><i class="ph ph-telegram-logo"></i></a>
-            <a href="#" class="social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-            <a href="#" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
-            <a href="#" class="social-link" aria-label="Twitter/X"><i class="ph ph-x-logo"></i></a>
-          </div>
-        </div>
-        <div class="contact-form-wrap reveal-right">
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" required />
-              <span class="form-error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-              <span class="form-error" id="emailError"></span>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="What is this regarding?" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-              <span class="form-error" id="messageError"></span>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Send Message <span class="btn-arrow">→</span>
-            </button>
-            <div class="form-success" id="formSuccess">
-              ✓ Your message has been sent! We'll get back to you soon.
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+.reveal-up    { transform: translateY(40px); }
+.reveal-left  { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
 
-  <!-- ═══════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <span class="logo-symbol">✦</span>
-            <span>TIS <em>Uchtepa</em></span>
-          </div>
-          <p>Thompson International School — Uchtepa Branch Student Union</p>
-          <p class="footer-motto">Leadership. Influence. Action.</p>
-        </div>
-        <div class="footer-links">
-          <strong>Navigate</strong>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#members">Members</a></li>
-            <li><a href="#teachers">Teachers</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-events">
-          <strong>Upcoming</strong>
-          <ul>
-            <li><span class="footer-date">Apr 12</span> Science Fair 2025</li>
-            <li><span class="footer-date">Apr 20</span> Navruz Festival</li>
-            <li><span class="footer-date">May 3</span> SU Elections</li>
-            <li><span class="footer-date">May 18</span> Year-End Gala</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Thompson International School – Uchtepa Branch. All rights reserved.</p>
-        <p>Built by the Student Union</p>
-      </div>
-    </div>
-  </footer>
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script src="script.js"></script>
-</body>
-</html>
+.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   NAVBAR
+════════════════════════════════════════════════════════════ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0;
+  transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+  background: rgba(8, 8, 8, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 var(--border), 0 8px 32px rgba(0,0,0,0.5);
+  padding: 0;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.nav-logo:hover { opacity: 0.8; }
+
+.logo-symbol {
+  color: var(--red);
+  font-size: 1.2rem;
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.logo-text em {
+  font-style: italic;
+  color: var(--red-light);
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 20px;
+  height: 2px;
+  background: var(--red);
+  border-radius: 2px;
+  transition: transform var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--white);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* ════════════════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+}
+
+/* Animated grid background */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245,240,235,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,240,235,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  to { transform: translateY(60px); }
+}
+
+/* Glowing orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(196,18,48,0.25), transparent 70%);
+  top: -100px;
+  right: -100px;
+  animation: orb-float 8s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(196,18,48,0.12), transparent 70%);
+  bottom: 100px;
+  left: -80px;
+  animation: orb-float 10s ease-in-out infinite reverse;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(20px, -30px) scale(1.05); }
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 140px 40px 100px;
+  margin-left: max(40px, calc((100vw - var(--max-width)) / 2 + 40px));
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 32px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--red);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 8px var(--red); }
+  50%       { box-shadow: 0 0 18px var(--red-light); }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--red-light);
+}
+
+.hero-subtitle {
+  font-family: var(--font-accent);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  letter-spacing: 0.25em;
+  color: var(--white-dim);
+  margin-bottom: 32px;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--red), transparent);
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--red), transparent);
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.1); }
+}
+
+/* Hero stats */
+.hero-stats {
+  position: absolute;
+  right: max(40px, calc((100vw - var(--max-width)) / 2 + 40px));
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.stat-item {
+  text-align: right;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: 2.8rem;
+  color: var(--red-light);
+  line-height: 1;
+  text-shadow: 0 0 30px var(--red-glow);
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+/* ════════════════════════════════════════════════════════════
+   ABOUT
+════════════════════════════════════════════════════════════ */
+.about-section {
+  background: var(--black-2);
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red-dim), transparent);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Visual */
+.about-visual { position: relative; }
+
+.about-image-frame {
+  position: relative;
+  aspect-ratio: 4/5;
+  max-height: 520px;
+}
+
+.about-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--black-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: var(--white-dim);
+}
+
+.placeholder-icon { font-size: 3rem; display: block; margin-bottom: 8px; }
+.placeholder-text p { font-size: 0.8rem; letter-spacing: 0.1em; }
+
+.about-frame-accent {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  right: 20px;
+  bottom: -20px;
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+.about-frame-label {
+  position: absolute;
+  bottom: -12px;
+  right: 32px;
+  background: var(--red);
+  color: var(--white);
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius);
+}
+
+/* Content */
+.about-lead {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.about-body {
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  margin-bottom: 20px;
+}
+
+.about-body strong { color: var(--white); }
+
+.about-pillars {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.pillar:hover {
+  border-color: var(--border-red);
+  background: var(--black-4);
+  box-shadow: 0 0 20px var(--red-dim);
+}
+
+.pillar-icon {
+  color: var(--red);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pillar strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  color: var(--white);
+}
+
+.pillar p {
+  font-size: 0.78rem;
+  color: var(--white-dim);
+}
+
+/* ════════════════════════════════════════════════════════════
+   MEMBERS
+════════════════════════════════════════════════════════════ */
+.members-section {
+  background: var(--black);
+  position: relative;
+}
+
+.members-section::before {
+  content: 'MEMBERS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-accent);
+  font-size: clamp(8rem, 18vw, 16rem);
+  color: rgba(245,240,235,0.015);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.member-card {
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover {
+  border-color: var(--border-red);
+  transform: translateY(-8px);
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+  box-shadow: 0 0 40px var(--red-glow), inset 0 0 40px rgba(196,18,48,0.05);
+}
+
+.member-card:hover .card-glow { opacity: 1; }
+
+.member-card-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Photo */
+.member-photo {
+  position: relative;
+  width: 100%;
+  height: 240px;        /* fixed height — every card identical */
+  overflow: hidden;
+  background: var(--black-4);
+  flex-shrink: 0;
+}
+
+/* Real <img> inside .member-photo */
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* crop to fill, never stretch */
+  object-position: center top; /* favour face over feet */
+  display: block;
+  transition: transform var(--transition);
+}
+
+.member-card:hover .member-photo img {
+  transform: scale(1.05);   /* subtle zoom on hover */
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--black-4), var(--black-5));
+}
+
+.member-position-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--red);
+  color: var(--white);
+  padding: 4px 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+/* Info */
+.member-info {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.member-role {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-light);
+  margin-bottom: 14px;
+}
+
+.member-bio {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  line-height: 1.6;
+  margin-bottom: 0;
+  flex: 1;               /* bio fills space, pushes achievements down */
+}
+
+.member-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;      /* consistent gap from bio */
+}
+
+.achievement-tag {
+  padding: 4px 10px;
+  border: 1px solid var(--border-red);
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--red-light);
+  background: var(--red-dim);
+  transition: var(--transition);
+}
+
+.member-card:hover .achievement-tag {
+  border-color: var(--red);
+  background: rgba(196,18,48,0.2);
+}
+
+/* ════════════════════════════════════════════════════════════
+   TEACHERS
+════════════════════════════════════════════════════════════ */
+.teachers-section {
+  background: var(--black-2);
+}
+
+.teachers-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red-dim), transparent);
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teacher-card {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  align-items: flex-start;
+}
+
+.teacher-card:hover {
+  border-color: var(--border-red);
+  box-shadow: 0 8px 40px var(--red-dim), 0 0 0 1px var(--border-red);
+  transform: translateY(-4px);
+}
+
+.teacher-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--border-red);
+  transition: var(--transition);
+}
+
+.teacher-card:hover .teacher-photo {
+  border-color: var(--red);
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+.teacher-ph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: var(--black-4);
+  /* Replace with: <img src="photos/teacher.jpg" alt="Teacher Name" /> */
+}
+
+.teacher-info { flex: 1; min-width: 0; }
+
+.teacher-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.teacher-subject {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-light);
+  margin-bottom: 10px;
+}
+
+.teacher-desc {
+  font-size: 0.78rem;
+  color: var(--white-dim);
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════════════════════════════════
+   NEWS & EVENTS
+════════════════════════════════════════════════════════════ */
+.news-section { background: var(--black); }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+/* News card base */
+.news-card {
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.news-card:hover {
+  border-color: var(--border-red);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px var(--border-red);
+}
+
+/* Featured */
+.news-featured { display: flex; flex-direction: column; }
+
+.news-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-image-featured {
+  aspect-ratio: 16/9;
+}
+
+.news-image-small {
+  aspect-ratio: 16/7;
+}
+
+.news-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--black-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 3rem;
+  color: var(--white-dim);
+  transition: transform var(--transition);
+  /* Replace with <img src="..." alt="..." /> */
+}
+
+.news-card:hover .news-img-placeholder { transform: scale(1.04); }
+
+.news-category-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--red);
+  color: var(--white);
+  padding: 4px 12px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.news-content { padding: 28px; flex: 1; }
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.news-date {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--red-light);
+  text-transform: uppercase;
+}
+
+.news-reading {
+  font-size: 0.72rem;
+  color: var(--white-dim);
+}
+
+.news-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+
+.news-featured .news-title { font-size: 1.55rem; }
+
+.news-card:hover .news-title { color: var(--red-light); }
+
+.news-excerpt {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.news-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-light);
+  transition: var(--transition);
+}
+
+.news-read-more:hover { gap: 10px; }
+.news-read-more span { transition: transform var(--transition); }
+.news-read-more:hover span { transform: translateX(4px); }
+
+/* Sidebar */
+.news-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-small { display: flex; flex-direction: column; }
+
+/* Timeline */
+.events-timeline {
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--red), var(--border), var(--border), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-top: 48px;
+}
+
+.timeline-date {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--red-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--red-glow);
+  border: 1px solid var(--red-light);
+}
+
+.timeline-content strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.timeline-content p {
+  font-size: 0.75rem;
+  color: var(--white-dim);
+}
+
+/* ════════════════════════════════════════════════════════════
+   GALLERY
+════════════════════════════════════════════════════════════ */
+.gallery-section {
+  background: var(--black-2);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-item.gallery-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--black-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2.5rem;
+  transition: transform var(--transition-slow);
+  /* Replace with: <img src="gallery/photo.jpg" alt="..." /> */
+}
+
+.gallery-placeholder p {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,8,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  transition: var(--transition);
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius);
+}
+
+.gallery-icon {
+  font-size: 2rem;
+  color: var(--red-light);
+  display: block;
+  transition: transform var(--transition);
+}
+
+.gallery-overlay p {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+.gallery-item:hover {
+  border-color: var(--border-red);
+  box-shadow: 0 0 30px var(--red-glow);
+}
+
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-item:hover .gallery-placeholder { transform: scale(1.08); }
+.gallery-item:hover .gallery-icon { transform: scale(1.15); }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.96);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  font-size: 1.4rem;
+  color: var(--white-dim);
+  transition: var(--transition);
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close:hover {
+  color: var(--white);
+  border-color: var(--red);
+  box-shadow: 0 0 16px var(--red-glow);
+}
+
+.lightbox-content {
+  max-width: 80vw;
+  max-height: 80vh;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--white-dim);
+  text-align: center;
+}
+
+/* ════════════════════════════════════════════════════════════
+   CONTACT
+════════════════════════════════════════════════════════════ */
+.contact-section { background: var(--black); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--black-3);
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.contact-info-item:hover .contact-icon {
+  background: var(--red-dim);
+  box-shadow: 0 0 16px var(--red-glow);
+}
+
+.contact-info-item strong {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 4px;
+}
+
+.contact-info-item p {
+  font-size: 0.88rem;
+  color: var(--white);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--white-dim);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  border-color: var(--red);
+  color: var(--red-light);
+  background: var(--red-dim);
+  box-shadow: 0 0 20px var(--red-glow);
+  transform: translateY(-3px);
+}
+
+/* Form */
+.contact-form-wrap {
+  background: var(--black-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--black-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--white);
+  outline: none;
+  transition: var(--transition);
+  resize: none;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(245,240,235,0.3);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--red);
+  background: var(--black-5);
+  box-shadow: 0 0 20px var(--red-dim), 0 0 0 1px var(--border-red);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: var(--red-light);
+}
+
+.form-error {
+  font-size: 0.72rem;
+  color: var(--red-light);
+  min-height: 16px;
+}
+
+.form-success {
+  display: none;
+  padding: 16px 20px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: var(--radius);
+  font-size: 0.84rem;
+  color: #86efac;
+  text-align: center;
+}
+
+.form-success.visible { display: block; }
+
+/* ════════════════════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════════════════════ */
+.footer {
+  background: var(--black-2);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 48px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-logo em {
+  font-style: italic;
+  color: var(--red-light);
+}
+
+.footer-brand p {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.footer-motto {
+  font-family: var(--font-accent) !important;
+  letter-spacing: 0.15em !important;
+  color: var(--red-light) !important;
+  font-size: 0.9rem !important;
+}
+
+.footer-links strong,
+.footer-events strong {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-links ul,
+.footer-events ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 0.84rem;
+  color: var(--white-dim);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a::before {
+  content: '→';
+  font-size: 0.7rem;
+  color: var(--red);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--white);
+  padding-left: 4px;
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.footer-events li {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-date {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  color: var(--red-light);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  width: 46px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: rgba(245,240,235,0.35);
+  letter-spacing: 0.05em;
+}
+
+/* ════════════════════════════════════════════════════════════
+   BACK TO TOP
+════════════════════════════════════════════════════════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+  width: 44px;
+  height: 44px;
+  background: var(--black-3);
+  border: 1px solid var(--border-red);
+  color: var(--white-dim);
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  box-shadow: 0 0 20px var(--red-glow);
+  transform: translateY(-3px);
+}
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (max-width: 1024px)
+════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  :root { --section-pad: 80px; }
+
+  .about-grid    { grid-template-columns: 1fr; gap: 48px; }
+  .about-visual  { max-width: 440px; }
+  .about-image-frame { max-height: 360px; }
+
+  .members-grid  { grid-template-columns: repeat(2, 1fr); }
+  .teachers-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .news-grid     { grid-template-columns: 1fr; }
+  .news-sidebar  { display: grid; grid-template-columns: repeat(2, 1fr); }
+
+  .timeline      { grid-template-columns: repeat(2, 1fr); }
+
+  .gallery-grid  { grid-template-columns: repeat(3, 1fr); }
+
+  .contact-grid  { grid-template-columns: 1fr; gap: 48px; }
+  .social-links  { justify-content: flex-start; }
+
+  .footer-grid   { grid-template-columns: 1fr 1fr; }
+  .footer-brand  { grid-column: span 2; }
+
+  .hero-stats    { display: none; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (max-width: 768px)
+════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  :root { --section-pad: 64px; }
+
+  .container { padding: 0 20px; }
+
+  /* Navbar mobile */
+  .hamburger   { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(8,8,8,0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    z-index: 999;
+  }
+
+  .nav-links.open { transform: translateX(0); }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 14px 24px;
+    letter-spacing: 0.15em;
+  }
+
+  /* Hero */
+  .hero-content {
+    padding: 120px 20px 80px;
+    margin-left: 0;
+  }
+
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+
+  /* Section title */
+  .section-header { margin-bottom: 48px; }
+
+  /* Members */
+  .members-grid  { grid-template-columns: 1fr; }
+
+  /* Teachers */
+  .teachers-grid { grid-template-columns: 1fr; }
+  .teacher-card  { flex-direction: column; }
+  .teacher-photo { width: 60px; height: 60px; }
+
+  /* News */
+  .news-sidebar { grid-template-columns: 1fr; }
+  .timeline     { grid-template-columns: 1fr; }
+  .timeline::before { display: none; }
+  .timeline-item { padding-top: 0; padding-left: 56px; }
+  .timeline-date {
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+  .timeline-dot { top: 50%; transform: translateY(-50%); left: 48px; }
+
+  /* Gallery */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  .gallery-item.gallery-large { grid-column: span 2; grid-row: span 1; }
+
+  /* Contact form */
+  .contact-form-wrap { padding: 24px 20px; }
+
+  /* Footer */
+  .footer-grid   { grid-template-columns: 1fr; gap: 36px; }
+  .footer-brand  { grid-column: span 1; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Back to top */
+  .back-to-top { bottom: 24px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item.gallery-large { grid-column: span 1; }
+  .members-section::before { display: none; }
+}
